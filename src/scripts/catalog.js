@@ -10,3 +10,10 @@ export const getCatalogHTML = (harvest) => {
     catalogHTML += `</div>`
     return catalogHTML;
 }
+
+export const getCropTotalsHTML = (harvest) => {
+    let cropsSet = newSet(harvest);
+
+    let cropTotals = `<div class="container--totals">`
+    cropTotals +=`</div>`
+}

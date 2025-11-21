@@ -6,6 +6,7 @@ import { harvestPlants } from "./harvester.js"
 import { getCatalogHTML } from "./catalog.js"
 import { renderCatalogToDOM } from "./render.js"
 import { harvestSorter } from "./sorter.js"
+import { harvestQuantity } from "./harvestQuantity.js"
 
 console.log("Welcome to the main module")
 
@@ -39,6 +40,8 @@ console.log(harvest)
 const sortedHarvest = harvestSorter(harvest)
 console.log("organized")
 console.log(sortedHarvest)
+
+console.log(harvestQuantity(sortedHarvest))
 
 const catalogHTML = getCatalogHTML(sortedHarvest)
 // console.log(catalogHTML)
