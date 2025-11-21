@@ -13,13 +13,19 @@ export const getCatalogHTML = (harvest) => {
 
 export const getCropTotalsHTML = (cropTotals) => {
     console.log(cropTotals)
-    let cropTotalsHTML = `<ul class="container--totals">
-    <li class="container--totals-heading"><span class="heading--name">Food</span><span class="heading--quantity">Quantity</span></li>`
+    let cropTotalsHTML = `<table class="crop-totals-table">
+    <tr class="total-heading">
+        <th class="totals-type">Food</th>
+        <th class="totals-quantity">Quantity</th>
+    </tr>`
 
     for (const c of cropTotals) {
         cropTotalsHTML += `
-        <li class="totals--crop"><span class="totals--crop-name">${c.type}</span><span class="totals--crop-name">${c.quantity}</span></li>`
+    <tr class="totals-item">
+        <td class="totals-type">${c.type}</td>
+        <td class="totals-quantity">${c.quantity}</td>
+    </tr>`
     }
-    cropTotalsHTML +=`</div>`
+    cropTotalsHTML +=`</table>`
     return cropTotalsHTML;
 }

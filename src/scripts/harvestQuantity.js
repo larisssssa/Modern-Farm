@@ -2,7 +2,7 @@ import { cropTypes } from "./plan.js";
 
 
 export const harvestQuantity = (harvest) => {
-    const cropTypeList = cropTypes()
+    const cropTypeList = cropTypes().sort()
     let cropQuantity = [];
 
     // create single object for each crop
