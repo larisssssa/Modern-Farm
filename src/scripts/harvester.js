@@ -13,5 +13,5 @@ export const harvestPlants = (plantsArray) => {
         }
     }
 
-    return seedsHarvested
+    return structuredClone(seedsHarvested)
 }
