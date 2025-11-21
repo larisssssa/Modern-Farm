@@ -4,6 +4,16 @@ export const renderCatalogToDOM = (catalogHTML) => {
     if (container) {
         container.innerHTML = catalogHTML;
     } else {
-        console.error("Could not find element with class container")
+        console.error("Could not find element with id container")
+    }
+}
+
+export const renderCropTotalsToDOM = (cropTotalsHTML) => {
+    const cropDisplay = document.getElementById('crop-totals-display')
+
+    if (cropDisplay) {
+        cropDisplay.innerHTML = cropTotalsHTML;
+    } else {
+        console.error("Could not find element with id crop-totals-display")
     }
 }
