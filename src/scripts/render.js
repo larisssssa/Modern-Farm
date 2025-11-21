@@ -9,11 +9,11 @@ export const renderCatalogToDOM = (catalogHTML) => {
 }
 
 export const renderCropTotalsToDOM = (cropTotalsHTML) => {
-    const cropDisplay = document.getElementById('crop-totals-display')
+    const cropDisplay = document.getElementById('cropTotalsDisplay')
 
     if (cropDisplay) {
         cropDisplay.innerHTML = cropTotalsHTML;
     } else {
-        console.error("Could not find element with id crop-totals-display")
+        console.error("Could not find element with id cropTotalsDisplay")
     }
 }
