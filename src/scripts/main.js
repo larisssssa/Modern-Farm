@@ -3,9 +3,10 @@ import { plantSeeds } from "./tractor.js"
 import { createAsparagus } from "./seeds/asparagus.js"
 import { addPlant, usePlants } from "./field.js"
 import { harvestPlants } from "./harvester.js"
-import { getCatalogHTML } from "./catalog.js"
-import { renderCatalogToDOM } from "./render.js"
+import { getCatalogHTML, getCropTotalsHTML } from "./catalog.js"
+import { renderCatalogToDOM, renderCropTotalsToDOM } from "./render.js"
 import { harvestSorter } from "./sorter.js"
+import { harvestQuantity } from "./harvestQuantity.js"
 
 console.log("Welcome to the main module")
 
@@ -40,7 +41,13 @@ const sortedHarvest = harvestSorter(harvest)
 console.log("organized")
 console.log(sortedHarvest)
 
+const harvestTotals = harvestQuantity(harvest)
+console.log(harvestTotals)
+
 const catalogHTML = getCatalogHTML(sortedHarvest)
-// console.log(catalogHTML)
+const cropTotalsHTML = getCropTotalsHTML(harvestTotals)
+
+console.log(cropTotalsHTML)
 
 renderCatalogToDOM(catalogHTML)
+renderCropTotalsToDOM(cropTotalsHTML)

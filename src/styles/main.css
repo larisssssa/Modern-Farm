@@ -41,6 +41,7 @@ h6 {
 
 #container {
     background-color: lightyellow;
+    margin: 50px;
 }
 
 .container--crops {
@@ -50,4 +51,26 @@ h6 {
     align-items: flex-start;
     padding: 20px;
     gap: 20px;
+}
+
+#cropTotalsDisplay {
+    margin: 50px;
+
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+table {
+    border-collapse: collapse;
+    width: 200px;
+}
+
+th, td {
+    padding: 5px;
+}
+
+.totals-quantity {
+    text-align: center;
 }

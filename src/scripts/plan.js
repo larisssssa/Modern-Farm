@@ -14,7 +14,9 @@ export const createPlan = () => {
     return plan
 }
 
-
+export const cropTypes = () => {
+    return structuredClone(types)
+}
 
 
 /*
