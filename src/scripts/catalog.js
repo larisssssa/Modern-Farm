@@ -11,9 +11,13 @@ export const getCatalogHTML = (harvest) => {
     return catalogHTML;
 }
 
-export const getCropTotalsHTML = (harvest) => {
-    let cropsSet = newSet(harvest);
+export const getCropTotalsHTML = (cropTotals) => {
+    let cropTotalsHTML = `<ul class="container--totals">
+    <li class="container--totals-heading"><span class="heading--name">Food</span><span class="heading--quantity">Quantity</span></li>`
 
-    let cropTotals = `<div class="container--totals">`
-    cropTotals +=`</div>`
+    for (const c of cropTotals) {
+        cropTotals += `
+        <li class="totals--crop"><span class="totals--crop-name">${c.type}</span><span class="totals--crop-name">${c.quantity}</span></li>`
+    }
+    cropTotalsHTML +=`</div>`
 }

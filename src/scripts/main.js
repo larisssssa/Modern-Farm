@@ -41,7 +41,8 @@ const sortedHarvest = harvestSorter(harvest)
 console.log("organized")
 console.log(sortedHarvest)
 
-console.log(harvestQuantity(sortedHarvest))
+const harvestTotals = harvestQuantity(harvest)
+console.log(harvestTotals)
 
 const catalogHTML = getCatalogHTML(sortedHarvest)
 // console.log(catalogHTML)
